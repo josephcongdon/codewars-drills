@@ -2,6 +2,7 @@ package main;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
@@ -13,23 +14,24 @@ public class ArraysExercises {
 //        System.out.println(number);
 
         Scanner scanner = new Scanner(System.in);
+        System.out.printf("please add a new name to the list: ");
+        String input = scanner.nextLine();
 
+        List<Person> people = new ArrayList<Person>();
+             people.add(new Person("Sarah"));
+             people.add(new Person("Ben"));
+             people.add(new Person("Bekah"));
+             people.add(new Person("Joe"));
+             people.add(new Person("Abby"));
+             people.add(new Person("Lydia"));
+             people.add(new Person("Caleb"));
+             people.add(new Person("Josh"));
 
+            Person p = new Person(input);
+            people.add(p);
+           for (Person i : people)
+        System.out.println(i.getName());
 
-
-        Person[] person = {
-         new Person ("Sarah"),
-         new Person ("Ben"),
-         new Person ("Bekah"),
-         new Person ("Joe"),
-         new Person ("Abby"),
-         new Person ("Lydia"),
-         new Person ("Caleb"),
-         new Person ("Josh")
-        };
-            for(Person p : person){
-                System.out.println(p.getName());
-            }
         }
 
 
