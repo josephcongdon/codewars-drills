@@ -25,9 +25,9 @@ public class ArraysExercises {
             people.add(new Person("Lydia"));
             people.add(new Person("Caleb"));
             people.add(new Person("Josh"));
-
-            Person p = new Person(input);
-            people.add(p);
+            people.add(new Person(input));
+//            Person p = new Person(input);
+//            people.add(p);
             for (Person i : people)
                 System.out.println(i.getName());
         } while (!input.equals("Bob"));
