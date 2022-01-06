@@ -1,17 +1,18 @@
 var countBits = function(num) {
     // Program Me
-    let newTotal = 0;
-    let newBinary = "";
+    let array;
     let binary = (num % 2).toString();
+    let backToNumbers;
+    let sum = 0;
     for (; num > 1; ) {
         num = parseInt(num/2);
-        binary =  (num % 2) + (binary);
-        newBinary += binary.split(',');
-        for(let i = 0; i <= newBinary.length; i++){
-            if (i === 1){
-                newTotal += i;
-            }
+        binary = (num % 2) + (binary);
         }
+        array = binary.split("");
+        backToNumbers = array.map(x => parseInt(x));
+        backToNumbers.forEach(function (digit){
+            sum += digit;
+     });
+    return sum;
     }
-return newTotal;
-};
+
